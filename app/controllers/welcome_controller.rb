@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
   @jsonObject
 
   def index
-    @jsonFile = File.read("app/assets/documents/consolidadinho.json")
+    @jsonFile = File.read("app/assets/documents/consolidado_2017_2018.json")
     @jsonObject = JSON.parse(@jsonFile)
   end
 end

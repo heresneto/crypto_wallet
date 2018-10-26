@@ -35,8 +35,5 @@
     "editor.detectIndentation": true,
     "editor.tabSize": 4,
     "editor.insertSpaces": false,
-    "editor.renderIndentGuides": true,
-    "editor.fontFamily": "'monaco'",
-    "editor.fontSize": 15,
-    "terminal.integrated.fontFamily": "menlo"
+    "editor.renderIndentGuides": true
 }

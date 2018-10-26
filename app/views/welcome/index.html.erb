@@ -10,12 +10,21 @@
     </li>
 </ul>
 
-<table style="border: 1px solid black; width: 500px">
-    <% @jsonObject.each do |orgao| %>
+<table class="table">
+    <tr>
+        <td>#</td>
+        <td>MES</td>
+        <td>UC</td>
+        <td>NOME</td>
+        <td>CONSUMO</td>
+    </tr>
+    <% @jsonObject.each_with_index do |orgao, index| %>
         <tr>
-            <td>
-                <%= orgao["NOME"] %>
-            </td>
+            <td><%= index + 1 %></td>
+            <td><%= orgao["MES"] %></td>
+            <td><%= orgao["UC"] %></td>
+            <td><%= orgao["NOME"] %></td>
+            <td><%= orgao["FAT_CONSUMO"] %></td>
         </tr>
     <% end %>
 </table>
