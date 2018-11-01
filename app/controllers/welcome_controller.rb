@@ -2,11 +2,14 @@ class WelcomeController < ApplicationController
   require "rubygems"
   require "json"
 
-  @jsonFile = "nao leu"
-  @jsonObject
+  @jsonObject = ''
+  @meu_nome = ''
+  @meu_curso = ''
+
 
   def index
-    @jsonFile = File.read("app/assets/documents/consolidado_2017_2018.json")
-    @jsonObject = JSON.parse(@jsonFile)
+    @jsonObject = JSON.parse(File.read("app/assets/documents/consolidadinho.json"))
+    @meu_curso = params[:curso]
+    @meu_nome = params[:nome]
   end
 end

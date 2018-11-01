@@ -24,7 +24,9 @@
   <div class="field">
     <%= form.label :url_image %>
     <%= form.text_field :url_image %>
-    <%= image_tag coin.url_image, width:25, height: 25 %>
+    <% unless coin.url_image == nil%>
+      <%= image_tag coin.url_image, width:25, height: 25 %>
+    <% end %>
   </div>
 
   <div class="actions">

@@ -1,0 +1,20 @@
+<hr>
+<h3>Leitura de um arquivo JSON</h3>
+<table class="table">
+    <tr>
+        <td>#</td>
+        <td>MES</td>
+        <td>UC</td>
+        <td>NOME</td>
+        <td>CONSUMO</td>
+    </tr>
+    <% @arrecadacao.each_with_index do |orgao, index| %>
+        <tr>
+            <td><%= index + 1 %></td>
+            <td><%= orgao["MES"] %></td>
+            <td><%= orgao["UC"] %></td>
+            <td><%= orgao["NOME"] %></td>
+            <td><%= orgao["FAT_CONSUMO"] %></td>
+        </tr>
+    <% end %>
+</table>

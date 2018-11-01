@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>CryptoWallet</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="pt-br" ng-app="app">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="msapplication-tap-highlight" content="no">
 
-  <body>
-    <%= yield %>
-  </body>
+
+  <title>CryptoWallet</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <%= yield %>
+</body>
+
 </html>

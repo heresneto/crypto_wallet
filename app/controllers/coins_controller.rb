@@ -26,9 +26,13 @@ class CoinsController < ApplicationController
   def create
     @coin = Coin.new(coin_params)
 
+    if @coin.url_image == nil || @coin.url_image == ''
+      @coin.url_image = "http://site.moeda.digital/wp-content/uploads/2016/12/opengraph_fb_moeda_site.jpg"
+    end
+
     respond_to do |format|
       if @coin.save
-        format.html { redirect_to @coin, notice: "Coin was successfully created." }
+        format.html { redirect_to @coin, notice: "A moeda #{@coin.description} foi criada com sucesso!" }
         format.json { render :show, status: :created, location: @coin }
       else
         format.html { render :new }
@@ -42,7 +46,7 @@ class CoinsController < ApplicationController
   def update
     respond_to do |format|
       if @coin.update(coin_params)
-        format.html { redirect_to @coin, notice: "Coin was successfully updated." }
+        format.html { redirect_to @coin, notice: "A moeda #{@coin.description} foi atualizada com sucesso!" }
         format.json { render :show, status: :ok, location: @coin }
       else
         format.html { render :edit }
@@ -56,7 +60,7 @@ class CoinsController < ApplicationController
   def destroy
     @coin.destroy
     respond_to do |format|
-      format.html { redirect_to coins_url, notice: "Coin was successfully destroyed." }
+      format.html { redirect_to coins_url, notice: "A moeda #{@coin.description} foi removida com sucesso!" }
       format.json { head :no_content }
     end
   end

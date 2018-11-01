@@ -4,27 +4,7 @@
 
 <h5>Data: <%= dataBR(Date.today) %></h5>
 
-<ul>
-    <li>
-        <%= link_to  "Cadastro de moedas", coins_path %>
-    </li>
-</ul>
+<%= render "menu" %>
 
-<table class="table">
-    <tr>
-        <td>#</td>
-        <td>MES</td>
-        <td>UC</td>
-        <td>NOME</td>
-        <td>CONSUMO</td>
-    </tr>
-    <% @jsonObject.each_with_index do |orgao, index| %>
-        <tr>
-            <td><%= index + 1 %></td>
-            <td><%= orgao["MES"] %></td>
-            <td><%= orgao["UC"] %></td>
-            <td><%= orgao["NOME"] %></td>
-            <td><%= orgao["FAT_CONSUMO"] %></td>
-        </tr>
-    <% end %>
-</table>
+<p>Meu nome é: <strong><%= @meu_nome %></strong></p>
+<p>Meu curso é: <strong><%= @meu_curso %></strong></p>
